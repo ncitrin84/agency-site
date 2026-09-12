@@ -4,17 +4,17 @@
 
 export const brand = {
   // ---- Identity -------------------------------------------------------
-  name: 'Siempre Cerca',
+  name: 'Como en Familia',
   tagline: 'Cuidado especializado en Alzheimer y demencia, en casa',
-  legalName: 'Siempre Cerca S. de R.L. de C.V.', // update once incorporated
-  domain: 'siemprecerca.mx',
+  legalName: 'Como en Familia S. de R.L. de C.V.', // update once incorporated
+  domain: 'comoenfamilia.mx',
   city: 'Guadalajara',
   serviceArea: 'Guadalajara, Zapopan y Tlajomulco',
 
   // ---- Contact --------------------------------------------------------
   phoneDisplay: '33 0000 0000',            // company phone (WhatsApp Business line)
   phoneE164: '523300000000',               // digits only, country code first — used for tel: and wa.me links
-  email: 'hola@siemprecerca.mx',
+  email: 'hola@comoenfamilia.mx',
   whatsappGreeting: 'Hola, me gustaría información sobre el cuidado en casa para un familiar con Alzheimer.',
 
   // ---- Tracking & marketing IDs (fill in as accounts are created) -------
