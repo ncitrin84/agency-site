@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { brand } from '../config/brand.js';
+// Conversion page. GTM fires the GA4 "generate_lead", Meta "Lead" and Google Ads conversion on this URL.
+---
+<Base title="Gracias" description="Recibimos tu mensaje." pageType="thankyou" noindex={true}>
+  <section>
+    <div class="wrap prose">
+      <h1>Gracias, recibimos tu mensaje</h1>
+      <p class="lead">Te contactamos el mismo día hábil. Si es urgente, llámanos al <a href={`tel:+${brand.phoneE164}`} data-track="phone_click" data-label="gracias">{brand.phoneDisplay}</a>.</p>
+      <p>Mientras tanto, te puede servir el curso gratuito <a href="https://www.isupportfordementia.org/" target="_blank" rel="noopener">iSupport de la OMS</a> para familiares de personas con demencia, disponible en español.</p>
+    </div>
+  </section>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'generate_lead', event_label: 'contact_form' });
+  </script>
+</Base>

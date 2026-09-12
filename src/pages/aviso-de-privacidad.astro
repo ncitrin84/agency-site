@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import { brand } from '../config/brand.js';
+// DRAFT — attorney review pending (roadmap weeks 2–3). Structure follows LFPDPPP 2025 requirements for an aviso integral.
+---
+<Base title="Aviso de privacidad" description={`Aviso de privacidad integral de ${brand.legalName}.`} pageType="legal">
+  <section>
+    <div class="wrap prose">
+      <h1>Aviso de privacidad integral</h1>
+      <p><strong>Borrador — pendiente de revisión legal.</strong></p>
+      <p>{brand.legalName} (en adelante "{brand.name}"), con domicilio en {brand.city}, Jalisco, México, es responsable del tratamiento de sus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y su Reglamento.</p>
+
+      <h2>Datos que recabamos</h2>
+      <p>A través de este sitio: nombre, teléfono, correo electrónico, parentesco con la persona a cuidar y la información que usted decida compartir en el formulario. Al contratar nuestros servicios, y únicamente con su consentimiento expreso y por escrito, recabamos datos personales sensibles relativos al estado de salud de la persona atendida.</p>
+
+      <h2>Finalidades</h2>
+      <p>Primarias: contactarle para atender su solicitud, realizar la valoración a domicilio, elaborar y ejecutar el plan de cuidado, facturación y cumplimiento de obligaciones legales. Secundarias: enviarle información sobre nuestros servicios y medir el uso de este sitio web. Puede oponerse a las finalidades secundarias escribiendo a <a href={`mailto:${brand.email}`}>{brand.email}</a>.</p>
+
+      <h2>Cookies y tecnologías de rastreo</h2>
+      <p>Este sitio utiliza cookies propias y de terceros (Google Analytics, Google Ads, Meta y HubSpot) para medir el uso del sitio y mostrar publicidad relevante. Estas cookies solo se activan si usted lo acepta en el aviso que aparece al ingresar; puede cambiar su decisión borrando las cookies de su navegador.</p>
+
+      <h2>Transferencias</h2>
+      <p>No transferimos sus datos personales a terceros sin su consentimiento, salvo los casos previstos en el artículo 37 de la Ley. Los proveedores tecnológicos mencionados actúan como encargados del tratamiento.</p>
+
+      <h2>Derechos ARCO</h2>
+      <p>Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición, así como revocar su consentimiento, enviando una solicitud a <a href={`mailto:${brand.email}`}>{brand.email}</a>. Responderemos en los plazos que establece la Ley.</p>
+
+      <h2>Cambios al aviso</h2>
+      <p>Cualquier modificación a este aviso se publicará en esta página.</p>
+      <p>Última actualización: septiembre de 2026.</p>
+    </div>
+  </section>
+</Base>

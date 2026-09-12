@@ -1,0 +1,54 @@
+---
+// Contact form. If a HubSpot form is configured in brand.js it is embedded (and HubSpot tracks the contact's
+// page history). Until then, a native form is shown that posts to /gracias so the funnel can be tested end-to-end.
+import { brand } from '../config/brand.js';
+const useHubspot = brand.hubspotPortalId && brand.hubspotFormId;
+---
+{useHubspot ? (
+  <div id="hubspot-form"></div>
+  <script is:inline define:vars={{ portalId: brand.hubspotPortalId, formId: brand.hubspotFormId, region: brand.hubspotRegion }}>
+    var s = document.createElement('script');
+    s.src = 'https://js.hsforms.net/forms/embed/v2.js';
+    s.onload = function () {
+      hbspt.forms.create({
+        region: region, portalId: portalId, formId: formId, target: '#hubspot-form',
+        onFormSubmitted: function () {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'form_submit', event_label: 'hubspot_contact' });
+          window.location.href = '/gracias';
+        }
+      });
+    };
+    document.head.appendChild(s);
+  </script>
+) : (
+  <form class="lead-form" action="/gracias" method="get" id="lead-form">
+    <div>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" required autocomplete="name" />
+    </div>
+    <div>
+      <label for="telefono">Teléfono / WhatsApp</label>
+      <input id="telefono" name="telefono" type="tel" required autocomplete="tel" />
+    </div>
+    <div>
+      <label for="parentesco">¿Para quién es el cuidado?</label>
+      <select id="parentesco" name="parentesco">
+        <option>Mi madre o padre</option>
+        <option>Mi esposo o esposa</option>
+        <option>Otro familiar</option>
+        <option>Estoy investigando opciones</option>
+      </select>
+    </div>
+    <div>
+      <label for="mensaje">Cuéntanos brevemente la situación (opcional)</label>
+      <textarea id="mensaje" name="mensaje"></textarea>
+    </div>
+    <div class="consent-row">
+      <input id="privacidad" type="checkbox" required />
+      <label for="privacidad">He leído el <a href="/aviso-de-privacidad">aviso de privacidad</a> y acepto que se me contacte por teléfono o WhatsApp.</label>
+    </div>
+    <button class="btn btn-primary" type="submit" data-track="form_submit" data-label="native_contact">Solicitar valoración gratuita</button>
+    <p style="font-size:.85rem;color:var(--muted);margin:0">Respondemos el mismo día hábil. Sin compromiso.</p>
+  </form>
+)}

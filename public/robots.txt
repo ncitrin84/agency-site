@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /gracias
+Sitemap: https://siemprecerca.mx/sitemap-index.xml

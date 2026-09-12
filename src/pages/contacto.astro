@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { brand } from '../config/brand.js';
+const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand.whatsappGreeting)}`;
+---
+<Base title="Contacto y valoración gratuita" description={`Solicita una valoración a domicilio sin costo. Llámanos, escríbenos por WhatsApp o déjanos tus datos. ${brand.serviceArea}.`} pageType="contact">
+  <section>
+    <div class="wrap" style="display:grid;grid-template-columns:1.1fr 1fr;gap:40px">
+      <div>
+        <h1>Hablemos</h1>
+        <p class="lead">Déjanos tus datos y te llamamos el mismo día hábil. O, si prefieres, escríbenos directo.</p>
+        <p>
+          <a class="btn btn-wa" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label="contacto">WhatsApp</a>
+          &nbsp;
+          <a class="btn btn-ghost" href={`tel:+${brand.phoneE164}`} data-track="phone_click" data-label="contacto">Llamar {brand.phoneDisplay}</a>
+        </p>
+        <p style="color:var(--muted);font-size:.95rem">Atendemos {brand.serviceArea}. Horario de atención telefónica: lunes a sábado, 9:00 a 19:00.</p>
+      </div>
+      <div class="card">
+        <LeadForm />
+      </div>
+    </div>
+  </section>
+  <style>@media (max-width: 800px) { section .wrap { grid-template-columns: 1fr !important; } }</style>
+</Base>

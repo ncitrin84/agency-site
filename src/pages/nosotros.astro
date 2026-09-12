@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import { brand } from '../config/brand.js';
+---
+<Base title="Nosotros" description={`Quiénes somos en ${brand.name}: un equipo de enfermería de Guadalajara dedicado exclusivamente al cuidado de personas con Alzheimer y demencia en su hogar.`} pageType="about">
+  <section>
+    <div class="wrap prose">
+      <h1>Nosotros</h1>
+      <p class="lead">{brand.name} nació en Guadalajara de la experiencia de enfermeras que vieron, una y otra vez, a familias hacer lo imposible por cuidar a un ser querido con Alzheimer sin la preparación ni el apoyo que hacía falta.</p>
+      <p>Nos dedicamos a una sola cosa: el cuidado de personas con demencia en su propia casa. No somos una agencia general de enfermería. Esa especialización es lo que permite que nuestro personal sepa qué hacer cuando tu papá no quiere bañarse, cuando tu mamá pregunta por alguien que ya no está, o cuando la tarde se vuelve difícil.</p>
+      <h2>Nuestro equipo</h2>
+      <p>Somos un equipo de enfermería y cuidadoras profesionales, lideradas por enfermeras con experiencia clínica y capacitación certificada en cuidado de demencia. <em>(Aquí van los perfiles de Paola, Ale y el equipo, con foto.)</em></p>
+      <h2>Nuestros principios</h2>
+      <p>Persona antes que enfermedad. Rutinas y actividades con sentido, no solo vigilancia. Comunicación honesta con la familia. Confidencialidad estricta de la información de salud. Y cuidar también a quien cuida.</p>
+      <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="nosotros_cta">Conversemos</a>
+    </div>
+  </section>
+</Base>

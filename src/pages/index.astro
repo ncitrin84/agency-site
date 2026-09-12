@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+import { brand } from '../config/brand.js';
+const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand.whatsappGreeting)}`;
+---
+<Base title="Cuidado en casa para personas con Alzheimer en Guadalajara" description={`${brand.name}: enfermeras y cuidadoras certificadas en demencia, en el hogar de tu familiar. Valoración gratuita en ${brand.serviceArea}.`} pageType="home">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Cuidado especializado en Alzheimer, en la comodidad de su casa</h1>
+        <p class="lead">Enfermeras y cuidadoras capacitadas específicamente en demencia, para que tu mamá o papá siga en su hogar con seguridad, dignidad y compañía — y tú recuperes la tranquilidad.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="hero_valoracion">Solicitar valoración gratuita</a>
+          <a class="btn btn-wa" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label="hero">Escribir por WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Lo que nos distingue</h3>
+        <ul>
+          <li>Personal certificado en cuidado de demencia (essentiALZ en español, método Montessori)</li>
+          <li>Supervisión por enfermera líder y revisión semanal de cada caso</li>
+          <li>Comunicación clara con la familia, incluso si vives fuera de Guadalajara</li>
+          <li>Manejo confidencial de la información de salud conforme a la ley mexicana</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Servicios</h2>
+      <div class="grid">
+        <div class="card"><h3>Cuidado por horas</h3><p>Acompañamiento, actividades significativas, apoyo en baño, alimentación y medicamentos. Turnos desde 4 horas.</p></div>
+        <div class="card"><h3>Cuidado 24 horas</h3><p>Equipo de cuidadoras en rotación para etapas avanzadas o cuando la familia necesita cobertura completa.</p></div>
+        <div class="card"><h3>Respiro para la familia</h3><p>Turnos puntuales para que el cuidador principal descanse, viaje o atienda sus propios asuntos.</p></div>
+        <div class="card"><h3>Valoración y plan de cuidado</h3><p>Visita a domicilio, evaluación de la etapa y de la casa, y un plan por escrito que se ajusta conforme avanza la enfermedad.</p></div>
+      </div>
+      <p style="margin-top:20px"><a href="/servicios" data-track="cta_click" data-label="home_servicios">Ver todos los servicios y cómo trabajamos →</a></p>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <h2>Cómo empezamos</h2>
+      <div class="steps">
+        <div class="step"><h3>Platicamos</h3><p>Una llamada o WhatsApp de 15 minutos para entender la situación y resolver tus dudas.</p></div>
+        <div class="step"><h3>Visitamos</h3><p>Nuestra enfermera líder visita el hogar, conoce a tu familiar y evalúa necesidades y riesgos.</p></div>
+        <div class="step"><h3>Proponemos</h3><p>Plan de cuidado por escrito, horarios, cuidadora asignada y costo claro, sin sorpresas.</p></div>
+        <div class="step"><h3>Acompañamos</h3><p>Inicio con supervisión, reportes a la familia y ajustes conforme cambia la etapa.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>¿Vives lejos de tu familiar?</h2>
+      <p class="lead">Muchas de las familias que atendemos viven en otra ciudad o en Estados Unidos. Coordinamos contigo por WhatsApp y videollamada, te enviamos reportes de cada visita y somos tus ojos en Guadalajara.</p>
+      <a class="btn btn-ghost" href="/contacto" data-track="cta_click" data-label="home_distancia">Hablar con nosotros</a>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>El primer paso es una conversación</h2>
+      <p>Valoración a domicilio sin costo y sin compromiso en {brand.serviceArea}.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="band_valoracion">Solicitar valoración</a>
+        <a class="btn btn-ghost" href={`tel:+${brand.phoneE164}`} data-track="phone_click" data-label="band">Llamar al {brand.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Base>

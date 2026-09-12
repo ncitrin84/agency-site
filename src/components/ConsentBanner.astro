@@ -1,0 +1,33 @@
+---
+// Cookie consent banner wired to Google Consent Mode v2.
+// Marketing/analytics cookies stay OFF until "Aceptar". Choice is stored per browser.
+---
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Uso de cookies">
+  <p>
+    Usamos cookies para medir el uso del sitio y mostrar anuncios relevantes. Puedes aceptarlas o continuar solo con las
+    cookies necesarias. Más información en nuestro <a href="/aviso-de-privacidad">aviso de privacidad</a>.
+  </p>
+  <div class="actions">
+    <button class="btn btn-primary" id="consent-accept" type="button">Aceptar</button>
+    <button class="btn btn-ghost" id="consent-reject" type="button">Solo necesarias</button>
+  </div>
+</div>
+<script is:inline>
+  (function () {
+    var box = document.getElementById('consent');
+    var saved = null;
+    try { saved = localStorage.getItem('sc_consent'); } catch (e) {}
+    if (!saved) box.classList.add('show');
+    function set(state) {
+      try { localStorage.setItem('sc_consent', state); } catch (e) {}
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      var v = state === 'granted' ? 'granted' : 'denied';
+      gtag('consent', 'update', { ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v });
+      dataLayer.push({ event: 'consent_' + state });
+      box.classList.remove('show');
+    }
+    document.getElementById('consent-accept').addEventListener('click', function () { set('granted'); });
+    document.getElementById('consent-reject').addEventListener('click', function () { set('denied'); });
+  })();
+</script>
