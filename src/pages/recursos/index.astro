@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CTABand from '../../components/CTABand.astro';
+const posts = Object.entries(import.meta.glob('../../content/recursos/*.md', { eager: true }))
+  .map(([path, mod]) => ({ slug: path.split('/').pop().replace('.md', ''), ...mod.frontmatter }))
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
+---
+<Base title="Recursos para familias que cuidan a alguien con Alzheimer" description="Guías prácticas y honestas: el baño, el síndrome vespertino, cómo elegir cuidadora, casa o residencia, la consulta con el neurólogo, cuidar a distancia." pageType="resources">
+  <PageHero eyebrow="Recursos" title="Lo que nos hubiera gustado leer cuando empezamos." lead="Guías cortas y prácticas para las situaciones que sabemos que estás viviendo. Sin tecnicismos, sin sermones." />
+  <section>
+    <div class="wrap">
+      <div class="article-list">
+        {posts.map(p => (
+          <a class="article-card" href={`/recursos/${p.slug}`}>
+            <h3>{p.title}</h3>
+            <p>{p.description}</p>
+          </a>
+        ))}
+      </div>
+      <div class="card" style="margin-top:32px;max-width:720px">
+        <h3>Curso gratuito para familiares</h3>
+        <p>La Organización Mundial de la Salud ofrece <a href="https://www.isupportfordementia.org/" target="_blank" rel="noopener">iSupport</a>, un curso en línea gratuito y en español para personas que cuidan a alguien con demencia. Lo recomendamos a todas nuestras familias; nuestras cuidadoras también lo cursan.</p>
+      </div>
+    </div>
+  </section>
+  <CTABand label="recursos_band" />
+</Base>

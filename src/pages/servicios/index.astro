@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CTABand from '../../components/CTABand.astro';
+import Photo from '../../components/Photo.astro';
+import { brand } from '../../config/brand.js';
+---
+<Base title="Servicios de cuidado en casa para Alzheimer y demencia" description={`Cuidadoras entrenadas en demencia, monitoreo 24/7, coordinación médica y apoyo a la familia. Un solo equipo responsable en ${brand.serviceArea}.`} pageType="services">
+  <PageHero eyebrow="Servicios" title="Un solo equipo responsable de todo lo que su cuidado necesita." lead="El cuidado en casa tradicional te vende horas de una persona. Nosotros nos hacemos responsables del resultado: que esté segura, tranquila y acompañada, y que tú lo sepas cada día." />
+
+  <section>
+    <div class="wrap">
+      <div class="pillars">
+        <a class="pillar" href="/servicios/cuidadoras" style="text-decoration:none;color:inherit"><span class="num">1</span><h3>Cuidadoras entrenadas en demencia</h3><p>Selección por temperamento, certificación en español, método Montessori, mentoría y supervisión semanal. Por horas, 24 horas o respiro.</p><span style="color:var(--brand);font-weight:600">Ver detalle →</span></a>
+        <a class="pillar" href="/servicios/monitoreo" style="text-decoration:none;color:inherit"><span class="num">2</span><h3>Monitoreo experto 24/7</h3><p>Cámaras en áreas comunes, revisadas por monitores capacitados que asesoran a la cuidadora y avisan a la familia cuando algo cambia.</p><span style="color:var(--brand);font-weight:600">Ver detalle →</span></a>
+        <a class="pillar" href="/servicios/coordinacion" style="text-decoration:none;color:inherit"><span class="num">3</span><h3>Todo coordinado</h3><p>Una coordinadora, un número. Medicamentos, insumos, citas médicas, terapias, transporte, seguridad en casa y altas hospitalarias.</p><span style="color:var(--brand);font-weight:600">Ver detalle →</span></a>
+        <a class="pillar" href="/servicios/familia" style="text-decoration:none;color:inherit"><span class="num">4</span><h3>Apoyo a la familia</h3><p>Panel compartido con asistente, reporte semanal, junta mensual de cuidado, capacitación, guía legal y línea 24/7.</p><span style="color:var(--brand);font-weight:600">Ver detalle →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Modalidades</p>
+        <h2>Se arma alrededor de tu familia, no al revés.</h2>
+        <ul class="check">
+          <li><strong>Por horas.</strong> Turnos de 4 a 12 horas, de día o de noche, los días que hagan falta.</li>
+          <li><strong>24 horas.</strong> Equipo fijo en rotación, con la misma coordinadora, para etapas moderadas y avanzadas.</li>
+          <li><strong>Respiro.</strong> Turnos puntuales para que quien cuida descanse, viaje o atienda su propia vida.</li>
+          <li><strong>Tu cuidadora actual, entrenada.</strong> Nos integramos alrededor de la persona que ya conoce y quiere.</li>
+          <li><strong>Solo coordinación y monitoreo.</strong> Si ya tienes cuidadoras, ponemos el sistema encima.</li>
+        </ul>
+        <p>Todas con un precio mensual fijo, definido en la valoración gratuita.</p>
+      </div>
+      <Photo alt="Cuidadora ayudando a un señor mayor a caminar en el jardín de su casa" shot="cuidadora y señor mayor caminando del brazo en un patio o jardín" />
+    </div>
+  </section>
+
+  <CTABand label="servicios_band" />
+</Base>

@@ -1,0 +1,133 @@
+---
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import Dashboard from '../../components/Dashboard.astro';
+import { brand } from '../../config/brand.js';
+const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent('Hi, I would like information about in-home dementia care for a family member in Guadalajara.')}`;
+const faq = [
+  { q: 'We already have a caregiver we trust. Do we have to replace her?', a: 'No. Keep her. We train her in dementia-specific care, coach her through the monitoring program, and build the full system around her.' },
+  { q: "Aren't cameras invasive?", a: 'Cameras cover common areas only, and your family decides placement. Feeds are reviewed solely by trained monitors under strict confidentiality agreements, in full compliance with Mexican data-protection law.' },
+  { q: 'What does it cost?', a: 'The free assessment produces a fixed monthly quote: no hourly surprises, no hidden extras. We invoice in pesos and can provide USD statements for your records.' },
+  { q: 'How do I pay from the US?', a: 'International wire or card. Monthly, no long-term contract, 30 days notice.' },
+  { q: 'What if a caregiver does not show up?', a: 'Our backup guarantee: a trained substitute, briefed on your parent\'s routine, steps in. You are never left stranded.' },
+];
+---
+<Base lang="en" title="Dementia-specialized home care in Guadalajara, Mexico, for families living abroad" description={`Your mother is in Guadalajara. You are in the US. ${brand.name} runs everything her dementia care needs: trained caregivers, 24/7 expert monitoring, doctors, medications, supplies, and a daily family dashboard. Free in-home assessment.`} pageType="en">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Dementia-specialized home care · Guadalajara, Mexico</p>
+        <h1>Your mom is in Guadalajara. You're in Chicago. We're your eyes.</h1>
+        <p class="lead">{brand.name} runs everything her dementia care needs: dementia-trained caregivers, 24/7 expert monitoring, medications, doctors, supplies, and a family dashboard you can read every morning. One accountable team. Handled.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/contacto?lang=en" data-track="cta_click" data-label="en_hero">Book a free care assessment</a>
+          <a class="btn btn-wa" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label="en_hero">WhatsApp us</a>
+        </div>
+        <p class="hero-note">Free in-home visit in Guadalajara · Video call with you in your time zone · English & Spanish</p>
+      </div>
+      <Photo alt="Caregiver and elderly woman laughing together at home" shot="cuidadora y señora mayor riendo en la sala" ratio="4/5" />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Does this sound familiar?</p>
+      <h2>Loving her was never the hard part.</h2>
+      <ul class="pain">
+        <li>Every call with your sister ends in a fight about who does what.</li>
+        <li>The caregiver means well, but she argues with him. You can't argue with dementia.</li>
+        <li>You're afraid of the phone ringing at 3 a.m.</li>
+        <li>You fly down for a week, fix what you can, and lie awake the night you get back.</li>
+        <li>You honestly can't tell if anything anyone is doing is helping.</li>
+      </ul>
+      <p class="callout"><strong>It's not you. And it's not the caregiver.</strong> Ordinary home care was never built for dementia, or for families 2,000 miles away. We are.</p>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">How it works from abroad</p>
+        <h2>You know how she's really doing. Every day. With data.</h2>
+        <ul class="check">
+          <li><strong>Family dashboard</strong> updated daily: sleep, meals, mood, medications, incidents. Ask the assistant a question and it answers from the record.</li>
+          <li><strong>Weekly report</strong> in plain English every Monday.</li>
+          <li><strong>One care coordinator</strong> who replies the same day, in your time zone.</li>
+          <li><strong>24/7 family line</strong> answered by someone who knows your parent.</li>
+          <li><strong>24/7 expert monitoring</strong> of in-home cameras (common areas only): changes are caught early and you hear about them first.</li>
+          <li><strong>Monthly family care meeting</strong> by video, moderated by the coordinator, so siblings work from the same facts.</li>
+          <li><strong>Doctor visits handled end to end</strong>, with a one-page data summary for the physician and the instructions back to you the same day.</li>
+        </ul>
+      </div>
+      <Dashboard />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">What's included</p>
+      <h2>Everything. One team.</h2>
+      <div class="included">
+        <div class="inc"><h3>Dementia-trained caregivers</h3><p>Certified in Spanish-language dementia care (Alzheimer's Association–recognized), Montessori for dementia, supervised before flying solo, coached weekly.</p></div>
+        <div class="inc"><h3>Remote clinical monitoring</h3><p>Trained monitors review common-area cameras around the clock and coach the caregiver the same day.</p></div>
+        <div class="inc"><h3>Medication & supplies on autopilot</h3><p>Reconciled with her doctors, administered on time, logged per dose; diapers and essentials delivered before they run out.</p></div>
+        <div class="inc"><h3>The right doctors</h3><p>Neurologists, geriatricians and psychiatrists in Guadalajara aligned with best-practice dementia care. We book, transport, accompany and report back.</p></div>
+        <div class="inc"><h3>Therapy & real days</h3><p>PT and OT coordinated; outings, music, reminiscence and Montessori activities that keep her engaged.</p></div>
+        <div class="inc"><h3>Home safety</h3><p>Fall-proofing audit, lighting, door sensors and wearables so wandering is caught before it becomes a crisis.</p></div>
+        <div class="inc"><h3>Hospital-to-home transitions</h3><p>If she's admitted, we manage the discharge, adjust the plan, and the caregiver is ready the day she returns.</p></div>
+        <div class="inc"><h3>Family training & legal guidance</h3><p>How to visit without fights, how to align siblings, and getting powers of attorney and directives done before a crisis forces it.</p></div>
+        <div class="inc"><h3>Backup guarantee & fixed price</h3><p>A trained substitute always steps in. One fixed monthly price from the assessment. Month to month.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap">
+      <p class="eyebrow">Why we exist</p>
+      <h2>We didn't start a company. We survived a diagnosis and wrote down everything that worked.</h2>
+      <p>When someone in our own family was diagnosed with dementia, we improvised like everyone does: caregivers who fought with her, medications we chased, WhatsApp arguments, nights lying awake. Together with the nurses who cared for her every day, we built the system we couldn't find. It gave us our family member back, and our lives back. Now we're opening it to a small number of families who are where we were.</p>
+      <p class="sig">— The {brand.name} team: the family and the nurses who lived it together</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Getting started</p>
+      <h2>From overwhelmed to handled, in three steps.</h2>
+      <div class="steps">
+        <div class="step"><h3>Free care assessment</h3><p>Our lead nurse visits your parent at home in Guadalajara; we meet you by video in your time zone.</p></div>
+        <div class="step"><h3>Your written care plan</h3><p>Caregivers, monitoring, medical coordination, safety changes and family support, with a fixed monthly price. In English if you prefer.</p></div>
+        <div class="step"><h3>Care begins within 2 weeks</h3><p>Team in place, monitoring live, dashboard running. You exhale.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" style="background:var(--surface);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Honest answers</p>
+      <h2>What families ask us first</h2>
+      <div class="faq">
+        {faq.map(i => (<details><summary>{i.q}</summary><p>{i.a}</p></details>))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Find out what handled feels like.</h2>
+      <p style="max-width:62ch;margin:0 auto 22px">One free in-home assessment in Guadalajara and one video call with you. You'll leave with a clear picture of her stage, the 3 changes that would help most right now, and a fixed-price plan if you want one.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn btn-primary" href="/contacto?lang=en" data-track="cta_click" data-label="en_band">Book my free care assessment</a>
+        <a class="btn btn-ghost" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label="en_band">WhatsApp</a>
+      </div>
+      <p class="fine">No commitment · No pressure · English & Spanish</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="ps"><strong>P.S.</strong> If you've read this far, some part of you is exhausted. We know, because we were you. The assessment is free, it's honest, and even if we never work together, you'll walk away with answers you can use tomorrow morning. <a href="/contacto?lang=en" data-track="cta_click" data-label="en_ps">Book it here.</a></p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CTABand from '../../components/CTABand.astro';
+import Photo from '../../components/Photo.astro';
+import Dashboard from '../../components/Dashboard.astro';
+---
+<Base title="Apoyo a la familia: panel compartido, reportes, capacitación y guía legal" description="Panel familiar actualizado cada día con asistente que responde tus preguntas, reporte semanal, junta mensual de cuidado, capacitación para visitar sin peleas, guía legal y línea 24/7." pageType="services">
+  <PageHero eyebrow="Pilar 4" title="Cuidar a quien cuida también es parte del cuidado." lead="La demencia no le pasa a una persona: le pasa a una familia. Hermanos que discuten, una hija que hace todo, un esposo que no duerme. Nuestro trabajo incluye devolverles la calma, la información y el tiempo." />
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">El panel familiar</p>
+        <h2>Una sola fuente de verdad.</h2>
+        <p>Signos vitales, comidas, sueño, ánimo, medicamentos e incidentes, registrados cada día por la cuidadora y el monitoreo. Cada hermano ve lo mismo, desde Guadalajara o desde Chicago. Se acaba el “¿cómo está?” a ciegas por WhatsApp.</p>
+        <p><strong>Pregúntale al expediente.</strong> El asistente de tu panel responde con lo que el equipo registró: “¿cómo durmió esta semana?”, “¿cuándo fue la última caída?”, “¿qué cambió el neurólogo?”. Con contexto, no solo números.</p>
+        <p><strong>Reporte semanal y mensual</strong> en lenguaje claro, listo para compartir con la familia y con los médicos.</p>
+      </div>
+      <Dashboard />
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Qué incluye</p>
+      <h2>Herramientas para la familia, no solo para la paciente.</h2>
+      <div class="included">
+        <div class="inc"><h3>Junta mensual de cuidado</h3><p>30 minutos, por video, con toda la familia y la coordinadora. Qué cambió, qué viene, qué decidir. Los hermanos se alinean con datos, no con reproches.</p></div>
+        <div class="inc"><h3>Capacitación para la familia</h3><p>Cómo visitar sin peleas, cómo responder a “quiero irme a mi casa”, qué hacer con las preguntas repetidas. Sesiones cortas, prácticas, en tu casa o por video.</p></div>
+        <div class="inc"><h3>Curso gratuito para familiares</h3><p>Te damos acceso y acompañamiento al curso iSupport de la Organización Mundial de la Salud para familiares de personas con demencia, en español.</p></div>
+        <div class="inc"><h3>Línea familiar 24/7</h3><p>Para lo urgente, a cualquier hora, contesta alguien que conoce a tu familiar.</p></div>
+        <div class="inc"><h3>Guía legal y financiera</h3><p>Poderes, directivas anticipadas, pensión, seguros: qué dejar listo y con quién. Te conectamos con un abogado de confianza.</p></div>
+        <div class="inc"><h3>Apoyo emocional</h3><p>Grupos de apoyo, orientación sobre el duelo anticipado, y una conversación honesta cuando la necesitas. No estás sola en esto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split rev">
+      <Photo alt="Familia en videollamada con la coordinadora de cuidado" shot="laptop en una mesa con una videollamada de varias personas, taza de café al lado" />
+      <div>
+        <p class="eyebrow">Para quien vive lejos</p>
+        <h2>Somos tus ojos en Guadalajara.</h2>
+        <p>Muchas de nuestras familias viven en otra ciudad o en Estados Unidos. Todo lo anterior se diseñó para que una hija en Chicago sepa con precisión cómo está su mamá, todos los días, y pueda tomar decisiones sin tener que volar cada vez.</p>
+        <a class="btn btn-ghost" href="/familias-en-el-extranjero">Cómo funciona a distancia</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABand label="familia_band" />
+</Base>

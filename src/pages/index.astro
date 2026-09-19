@@ -1,73 +1,132 @@
 ---
 import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import Dashboard from '../components/Dashboard.astro';
+import FAQ from '../components/FAQ.astro';
+import CTABand from '../components/CTABand.astro';
 import { brand } from '../config/brand.js';
+import { faqHome } from '../content/faq.js';
 const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand.whatsappGreeting)}`;
 ---
-<Base title="Cuidado en casa para personas con Alzheimer en Guadalajara" description={`${brand.name}: enfermeras y cuidadoras certificadas en demencia, en el hogar de tu familiar. Valoración gratuita en ${brand.serviceArea}.`} pageType="home">
+<Base title="Cuidado en casa especializado en Alzheimer y demencia en Guadalajara" description={`No tienes que volverte experto en demencia para que tu mamá esté segura en casa. ${brand.name} se encarga de todo: cuidadoras entrenadas, monitoreo 24/7, médicos, medicamentos y apoyo a la familia. Valoración gratuita en ${brand.serviceArea}.`} pageType="home">
 
   <section class="hero">
     <div class="wrap">
       <div>
-        <h1>Cuidado especializado en Alzheimer, en la comodidad de su casa</h1>
-        <p class="lead">Enfermeras y cuidadoras capacitadas específicamente en demencia, para que tu mamá o papá siga en su hogar con seguridad, dignidad y compañía — y tú recuperes la tranquilidad.</p>
+        <p class="eyebrow">Cuidado en casa especializado en demencia · {brand.city}</p>
+        <h1>No tienes que volverte experta en demencia para que tu mamá esté segura en casa.</h1>
+        <p class="lead">{brand.name} se encarga de todo lo que su cuidado necesita: cuidadoras entrenadas en demencia, monitoreo 24/7 por especialistas, medicamentos, médicos, insumos y apoyo para toda la familia. Un solo equipo. Resuelto.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="hero_valoracion">Solicitar valoración gratuita</a>
+          <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="hero_valoracion">Agendar mi valoración gratuita</a>
           <a class="btn btn-wa" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label="hero">Escribir por WhatsApp</a>
         </div>
+        <p class="hero-note">Visita a domicilio gratuita · Sin compromiso · Español e inglés</p>
+        <p class="hero-proof">Nacimos de años cuidando a una persona de nuestra propia familia: cada servicio existe porque lo necesitamos y no lo encontramos.</p>
       </div>
-      <div class="hero-card">
-        <h3>Lo que nos distingue</h3>
-        <ul>
-          <li>Personal certificado en cuidado de demencia (essentiALZ en español, método Montessori)</li>
-          <li>Supervisión por enfermera líder y revisión semanal de cada caso</li>
-          <li>Comunicación clara con la familia, incluso si vives fuera de Guadalajara</li>
-          <li>Manejo confidencial de la información de salud conforme a la ley mexicana</li>
-        </ul>
-      </div>
+      <Photo alt="Cuidadora acompañando a una señora mayor en la sala de su casa" shot="cuidadora y señora mayor conversando en la sala, luz natural, sin uniforme clínico" ratio="4/5" />
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <h2>Servicios</h2>
-      <div class="grid">
-        <div class="card"><h3>Cuidado por horas</h3><p>Acompañamiento, actividades significativas, apoyo en baño, alimentación y medicamentos. Turnos desde 4 horas.</p></div>
-        <div class="card"><h3>Cuidado 24 horas</h3><p>Equipo de cuidadoras en rotación para etapas avanzadas o cuando la familia necesita cobertura completa.</p></div>
-        <div class="card"><h3>Respiro para la familia</h3><p>Turnos puntuales para que el cuidador principal descanse, viaje o atienda sus propios asuntos.</p></div>
-        <div class="card"><h3>Valoración y plan de cuidado</h3><p>Visita a domicilio, evaluación de la etapa y de la casa, y un plan por escrito que se ajusta conforme avanza la enfermedad.</p></div>
-      </div>
-      <p style="margin-top:20px"><a href="/servicios" data-track="cta_click" data-label="home_servicios">Ver todos los servicios y cómo trabajamos →</a></p>
+      <p class="eyebrow">¿Te suena familiar?</p>
+      <h2>Quererla nunca fue la parte difícil.</h2>
+      <ul class="pain">
+        <li>Cada día es la misma discusión por el baño.</li>
+        <li>La cuidadora tiene buena intención, pero discute con él. Y con la demencia no se puede discutir.</li>
+        <li>Te da miedo que suene el teléfono a las 3 de la mañana.</li>
+        <li>Tus hermanos critican desde lejos. Tú haces todo.</li>
+        <li>Estás viviendo un duelo por alguien que sigue aquí, y no hay tiempo ni para sentirlo.</li>
+        <li>Honestamente no sabes si algo de lo que haces está ayudando.</li>
+      </ul>
+      <p class="callout"><strong>No eres tú. Y tampoco es la cuidadora.</strong> El cuidado en casa tradicional nunca se diseñó para la demencia. Nosotros sí.</p>
     </div>
   </section>
 
   <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
     <div class="wrap">
-      <h2>Cómo empezamos</h2>
-      <div class="steps">
-        <div class="step"><h3>Platicamos</h3><p>Una llamada o WhatsApp de 15 minutos para entender la situación y resolver tus dudas.</p></div>
-        <div class="step"><h3>Visitamos</h3><p>Nuestra enfermera líder visita el hogar, conoce a tu familiar y evalúa necesidades y riesgos.</p></div>
-        <div class="step"><h3>Proponemos</h3><p>Plan de cuidado por escrito, horarios, cuidadora asignada y costo claro, sin sorpresas.</p></div>
-        <div class="step"><h3>Acompañamos</h3><p>Inicio con supervisión, reportes a la familia y ajustes conforme cambia la etapa.</p></div>
+      <p class="eyebrow">Un cuidado distinto</p>
+      <h2>Cuatro pilares. Un solo equipo responsable.</h2>
+      <div class="pillars">
+        <div class="pillar"><span class="num">1</span><h3>Cuidadoras entrenadas en demencia</h3><p>Entran a su mundo en vez de pelear con él: menos batallas, días más tranquilos, dignidad intacta.</p><a href="/servicios/cuidadoras">Cómo las entrenamos →</a></div>
+        <div class="pillar"><span class="num">2</span><h3>Monitoreo experto 24/7</h3><p>Especialistas supervisan el cuidado por cámaras en casa, detectan cambios a tiempo y asesoran a la cuidadora cada día.</p><a href="/servicios/monitoreo">Cómo funciona el monitoreo →</a></div>
+        <div class="pillar"><span class="num">3</span><h3>Todo coordinado</h3><p>Medicamentos, insumos, médicos, terapias, transporte, trámites legales: categorías enteras de preocupación, borradas.</p><a href="/servicios/coordinacion">Qué incluye →</a></div>
+        <div class="pillar"><span class="num">4</span><h3>Apoyo a la familia</h3><p>Capacitación, un panel compartido, una línea 24/7 y un reporte semanal en el que toda la familia confía.</p><a href="/servicios/familia">Cómo apoyamos a la familia →</a></div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <h2>¿Vives lejos de tu familiar?</h2>
-      <p class="lead">Muchas de las familias que atendemos viven en otra ciudad o en Estados Unidos. Coordinamos contigo por WhatsApp y videollamada, te enviamos reportes de cada visita y somos tus ojos en Guadalajara.</p>
-      <a class="btn btn-ghost" href="/contacto" data-track="cta_click" data-label="home_distancia">Hablar con nosotros</a>
+      <p class="eyebrow">Qué incluye</p>
+      <h2>Todo. Un solo equipo.</h2>
+      <div class="included">
+        <div class="inc"><h3>Cuidadoras que entienden la demencia</h3><p>Entrenadas para redirigir, no confrontar. Rechazo al baño, deambulación, síndrome vespertino, preguntas repetidas: conocemos las 3 o 4 respuestas que sí funcionan para cada una, porque las hemos vivido.</p></div>
+        <div class="inc"><h3>Monitoreo clínico remoto</h3><p>Monitores capacitados revisan las cámaras las 24 horas, detectan cambios de conducta o de salud y le dan retroalimentación a la cuidadora el mismo día. Siempre sabes que de verdad está bien.</p></div>
+        <div class="inc"><h3>Una coordinadora, un solo número</h3><p>Una persona responsable de tu familia. Le escribes a ella, no a un conmutador. Ella organiza a todos los demás.</p></div>
+        <div class="inc"><h3>Medicamentos bajo control</h3><p>Planeación, compra y administración puntual, con registro de cada dosis. Nunca vuelves a pensar en un resurtido.</p></div>
+        <div class="inc"><h3>Insumos en automático</h3><p>Pañales, cremas, talcos y lo esencial del cuidado, entregados antes de que se acaben.</p></div>
+        <div class="inc"><h3>Citas médicas de principio a fin</h3><p>Agendamos, la acompañamos, y el médico recibe un resumen de una página con sus datos reales. Tú recibes las indicaciones el mismo día, ya integradas al plan.</p></div>
+        <div class="inc"><h3>Los médicos correctos</h3><p>Te conectamos con neurólogos, psiquiatras y geriatras alineados con las mejores prácticas en demencia.</p></div>
+        <div class="inc"><h3>Terapia y fuerza corporal</h3><p>Fisioterapia y terapia ocupacional coordinadas y con transporte: más firme al caminar, menos caídas.</p></div>
+        <div class="inc"><h3>Días de verdad, no solo estar sentada</h3><p>Salidas al parque, al cine, al acuario; música, reminiscencia y rutinas cognitivas con método Montessori que mantienen su mente activa y sus días con alegría.</p></div>
+        <div class="inc"><h3>Casa segura, bien hecha</h3><p>Auditoría anticaídas, iluminación, sensores en puertas y dispositivos portátiles: la deambulación se detecta antes de que sea una crisis.</p></div>
+        <div class="inc"><h3>Una sola fuente de verdad</h3><p>Signos vitales, comidas, sueño, ánimo e incidentes registrados cada día, con reportes semanales y mensuales que tu familia y sus médicos sí pueden usar.</p></div>
+        <div class="inc"><h3>Capacitación familiar y guía legal</h3><p>Aprende a visitarla sin peleas, alinea a tus hermanos con una junta mensual de cuidado y deja listo lo legal (poderes, directivas) antes de que una crisis lo exija.</p></div>
+        <div class="inc"><h3>Del hospital a casa, sin caídas al vacío</h3><p>Si hay una hospitalización, coordinamos el alta, ajustamos el plan y la cuidadora está lista el día que regresa.</p></div>
+        <div class="inc"><h3>Respaldo garantizado</h3><p>Si una cuidadora no puede llegar, entra una suplente entrenada y con la rutina de tu familiar en la mano. Nunca te quedas sola.</p></div>
+      </div>
+      <p style="margin-top:24px"><a href="/servicios" data-track="cta_click" data-label="home_servicios">Ver cada servicio en detalle →</a></p>
     </div>
   </section>
 
-  <section class="band">
-    <div class="wrap">
-      <h2>El primer paso es una conversación</h2>
-      <p>Valoración a domicilio sin costo y sin compromiso en {brand.serviceArea}.</p>
-      <div class="hero-actions" style="justify-content:center">
-        <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="band_valoracion">Solicitar valoración</a>
-        <a class="btn btn-ghost" href={`tel:+${brand.phoneE164}`} data-track="phone_click" data-label="band">Llamar al {brand.phoneDisplay}</a>
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">El panel familiar</p>
+        <h2>Ve cómo está de verdad, desde donde estés.</h2>
+        <p class="lead">Cada hermano ve la misma información. Cada médico recibe datos reales. Se acaba el “¿cómo está?” a ciegas por WhatsApp.</p>
+        <p>Y cuando tienes una pregunta, se la haces al expediente: el asistente de tu panel responde con lo que el equipo registró esa semana.</p>
+        <a class="btn btn-ghost" href="/servicios/familia" data-track="cta_click" data-label="home_dashboard">Cómo funciona el panel</a>
       </div>
+      <Dashboard />
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Por qué existimos</p>
+        <h2>No fundamos una empresa. Sobrevivimos un diagnóstico y anotamos todo lo que funcionó.</h2>
+        <p>Cuando a una persona de nuestra familia le diagnosticaron demencia, hicimos lo que hace toda familia: improvisar. Contratamos cuidadoras que peleaban con ella en vez de entrar a su mundo. Perseguimos medicamentos, discutimos por WhatsApp, dudamos de los médicos y pasamos noches en vela preguntándonos si estaba bien.</p>
+        <p>Entonces, junto con las enfermeras que la cuidaban cada día, construimos el sistema que no encontramos: cuidadoras realmente entrenadas en demencia, cámaras supervisadas por especialistas que asesoran al equipo a diario, cada signo vital y cada estado de ánimo registrados donde toda la familia lo pueda ver, medicamentos e insumos en automático, y guía honesta para los momentos duros.</p>
+        <p>Nos devolvió a nuestra familiar. Y nos devolvió nuestra vida. Hoy lo abrimos a un número pequeño de familias que están donde nosotros estuvimos.</p>
+        <p class="sig">— El equipo de {brand.name}: la familia y las enfermeras que lo vivieron juntas</p>
+      </div>
+      <Photo alt="Enfermera líder del equipo con una cuidadora, revisando el plan de cuidado" shot="dos integrantes del equipo revisando un plan impreso en la mesa de una cocina" ratio="4/5" />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Cómo empezamos</p>
+      <h2>De abrumada a resuelto, en tres pasos.</h2>
+      <div class="steps">
+        <div class="step"><h3>Valoración gratuita</h3><p>Visitamos a tu familiar en casa, conocemos a tu familia y entendemos su etapa, sus rutinas y qué es lo más difícil ahora mismo.</p></div>
+        <div class="step"><h3>Tu plan de cuidado</h3><p>Un plan por escrito con cuidadoras, monitoreo, coordinación médica, cambios de seguridad y apoyo familiar, con un precio mensual fijo. Sin sorpresas.</p></div>
+        <div class="step"><h3>El cuidado empieza en 2 semanas</h3><p>Equipo entrenado en su lugar, monitoreo activo, panel funcionando, insumos llegando. Respiras, quizá por primera vez en meses.</p></div>
+      </div>
+      <p style="margin-top:20px"><a href="/como-funciona">Qué pasa exactamente en la valoración →</a></p>
+    </div>
+  </section>
+
+  <FAQ items={faqHome} />
+
+  <CTABand label="home_band" title="Descubre lo que se siente tenerlo resuelto." />
+
+  <section>
+    <div class="wrap">
+      <p class="ps"><strong>P.D.</strong> Si leíste hasta aquí, una parte de ti está agotada. Lo sabemos, porque fuimos tú. La valoración es gratuita, es honesta, y aunque nunca trabajemos juntos, te vas con respuestas que puedes usar mañana en la mañana. Solo eso ya vale la llamada. <a href="/contacto" data-track="cta_click" data-label="ps">Agenda aquí.</a></p>
     </div>
   </section>
 </Base>

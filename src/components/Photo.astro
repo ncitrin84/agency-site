@@ -1,0 +1,13 @@
+---
+// Image slot. Until real photos exist it renders a soft placeholder with the shot description,
+// so the layout is final and swapping in a real photo is a one-line change (src prop).
+interface Props { src?: string; alt: string; shot?: string; ratio?: string; class?: string }
+const { src, alt, shot = alt, ratio = '4/3', class: cls = '' } = Astro.props;
+---
+{src ? (
+  <img class={`photo ${cls}`} src={src} alt={alt} loading="lazy" style={`aspect-ratio:${ratio}`} />
+) : (
+  <div class={`photo photo-placeholder ${cls}`} style={`aspect-ratio:${ratio}`} role="img" aria-label={alt}>
+    <span>Foto: {shot}</span>
+  </div>
+)}

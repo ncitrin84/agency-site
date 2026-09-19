@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import FAQ from '../components/FAQ.astro';
+import CTABand from '../components/CTABand.astro';
+import { faqAll } from '../content/faq.js';
+---
+<Base title="Preguntas frecuentes sobre cuidado en casa para Alzheimer" description="Costos, cámaras, privacidad, contratos, qué pasa cuando la enfermedad avanza, zonas de atención y más. Respuestas honestas." pageType="faq">
+  <PageHero eyebrow="Preguntas frecuentes" title="Respuestas honestas, antes de que preguntes." lead="Si tu pregunta no está aquí, escríbenos por WhatsApp. Respondemos el mismo día hábil." />
+  <FAQ items={faqAll} title="Todo lo que las familias nos preguntan" />
+  <CTABand label="faq_band" />
+</Base>

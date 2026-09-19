@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CTABand from '../../components/CTABand.astro';
+import Photo from '../../components/Photo.astro';
+---
+<Base title="Coordinación médica, medicamentos e insumos para personas con demencia" description="Una coordinadora, un solo número. Medicamentos, insumos, citas médicas acompañadas con resumen clínico, terapias, transporte, seguridad en casa y altas hospitalarias, todo resuelto." pageType="services">
+  <PageHero eyebrow="Pilar 3" title="Categorías enteras de preocupación, borradas." lead="El cuidado de una persona con demencia son cien tareas chicas que nadie ve: la receta que se venció, la cita que hay que agendar, el pañal que se acabó un domingo, la indicación del neurólogo que nadie anotó. Nosotros las hacemos todas, y te avisamos cuando están hechas." />
+
+  <section>
+    <div class="wrap split">
+      <Photo alt="Coordinadora de cuidado hablando por teléfono con una carpeta del plan de cuidado" shot="coordinadora al teléfono, carpeta abierta, ambiente de oficina pequeña o casa" />
+      <div>
+        <p class="eyebrow">Una coordinadora, un número</p>
+        <h2>Le escribes a una persona, no a un conmutador.</h2>
+        <p>Cada familia tiene una coordinadora de cuidado responsable de todo. Ella conoce a tu familiar, a la cuidadora, a los médicos y a tu familia. Tú le escribes a ella; ella organiza a los demás y te responde el mismo día.</p>
+        <p>Es la diferencia entre contratar horas de alguien y tener a alguien que se hace cargo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Qué coordinamos</p>
+      <h2>Todo lo que hoy cae en ti.</h2>
+      <div class="included">
+        <div class="inc"><h3>Medicamentos</h3><p>Reconciliación de todas las recetas con el médico tratante, calendario de administración, compra y resurtido antes de que se acaben, registro de cada dosis en el panel.</p></div>
+        <div class="inc"><h3>Insumos</h3><p>Pañales, cremas, talcos, protectores, suplementos y lo que su etapa requiera, entregados en casa antes de que falten.</p></div>
+        <div class="inc"><h3>Citas médicas, de principio a fin</h3><p>Agendamos, coordinamos el transporte, la acompañamos, y el médico recibe un resumen de una página con signos, sueño, conducta y medicamentos del último mes. Las indicaciones regresan el mismo día, ya integradas al plan.</p></div>
+        <div class="inc"><h3>Los médicos correctos</h3><p>Red de neurólogos, geriatras y psiquiatras en Guadalajara alineados con las mejores prácticas en demencia. Si el tuyo ya es bueno, trabajamos con él.</p></div>
+        <div class="inc"><h3>Terapias</h3><p>Fisioterapia y terapia ocupacional coordinadas y con transporte. Más fuerza, mejor equilibrio, menos caídas.</p></div>
+        <div class="inc"><h3>Del hospital a casa</h3><p>Ante una hospitalización, coordinamos con el hospital, preparamos el alta, ajustamos medicamentos y plan, y la cuidadora está lista el día que regresa. Es el momento donde más familias se rompen; nosotros lo sostenemos.</p></div>
+        <div class="inc"><h3>Seguridad en casa</h3><p>Auditoría anticaídas, iluminación, sensores, barras y cambios de mobiliario, con proveedores de confianza.</p></div>
+        <div class="inc"><h3>Salidas y actividades</h3><p>Parque, cine, acuario, misa, la peluquería de siempre. Con transporte y acompañamiento. Días de verdad, no solo estar sentada.</p></div>
+        <div class="inc"><h3>Trámites y lo legal</h3><p>Te orientamos sobre poderes, directivas anticipadas, pensión y seguros, y te conectamos con un abogado de confianza antes de que una crisis lo exija.</p></div>
+        <div class="inc"><h3>Cuidados paliativos</h3><p>Cuando llegue el momento, coordinamos con el equipo de paliativos y acompañamos a la familia en las decisiones difíciles, con honestidad y sin prisa.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split rev">
+      <Photo alt="Resumen clínico de una página sobre el escritorio de un consultorio" shot="hoja impresa de resumen clínico sobre un escritorio médico, estetoscopio al lado" />
+      <div>
+        <p class="eyebrow">El resumen de una página</p>
+        <h2>El médico la ve 15 minutos. Nosotros, todo el mes.</h2>
+        <p>Una consulta de neurología dura poco y la familia rara vez recuerda todo lo relevante. Por eso cada cita va con un resumen de una página generado desde el panel: tendencias de sueño, apetito, conducta, caídas, presión y cada dosis administrada. El médico decide con datos, no con impresiones. Y sus indicaciones no se quedan en una receta: la coordinadora las integra al plan ese mismo día.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand label="coordinacion_band" />
+</Base>

@@ -1,0 +1,17 @@
+---
+import { brand } from '../config/brand.js';
+interface Props { title?: string; text?: string; label?: string }
+const { title = 'El primer paso es una conversación', text = `Valoración a domicilio sin costo y sin compromiso en ${brand.serviceArea}. Sales de la visita con una idea clara de la etapa, los 3 cambios que más ayudarían ahora mismo, y un plan con precio fijo si lo quieres.`, label = 'band' } = Astro.props;
+const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand.whatsappGreeting)}`;
+---
+<section class="band">
+  <div class="wrap">
+    <h2>{title}</h2>
+    <p style="max-width:62ch;margin:0 auto 22px">{text}</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label={label}>Solicitar valoración gratuita</a>
+      <a class="btn btn-ghost" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label={label}>Escribir por WhatsApp</a>
+    </div>
+    <p class="fine">Visita gratuita · Sin compromiso · Español e inglés</p>
+  </div>
+</section>

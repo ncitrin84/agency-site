@@ -9,8 +9,9 @@ interface Props {
   /** GA4 content_group pushed to dataLayer — used to build funnels */
   pageType?: string;
   noindex?: boolean;
+  lang?: string;
 }
-const { title, description, pageType = 'other', noindex = false } = Astro.props;
+const { title, description, pageType = 'other', noindex = false, lang = 'es-MX' } = Astro.props;
 const fullTitle = `${title} | ${brand.name}`;
 const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand.whatsappGreeting)}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
@@ -29,7 +30,7 @@ const schema = {
 };
 ---
 <!doctype html>
-<html lang="es-MX">
+<html lang={lang}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -83,11 +84,15 @@ const schema = {
   <header class="site-header">
     <div class="wrap">
       <a class="logo" href="/">{brand.name}</a>
-      <nav class="nav" aria-label="Principal">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav class="nav" id="main-nav" aria-label="Principal">
         <a href="/servicios">Servicios</a>
-        <a href="/nosotros" class="hide-sm">Nosotros</a>
-        <a href="/contacto">Contacto</a>
-        <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="header">Solicitar valoración</a>
+        <a href="/como-funciona">Cómo funciona</a>
+        <a href="/nosotros">Nosotros</a>
+        <a href="/familias-en-el-extranjero">Familias lejos</a>
+        <a href="/recursos">Recursos</a>
+        <a href="/en" lang="en" class="nav-en">English</a>
+        <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="header">Valoración gratuita</a>
       </nav>
     </div>
   </header>
@@ -103,8 +108,8 @@ const schema = {
         <a href={`tel:+${brand.phoneE164}`} data-track="phone_click" data-label="footer">{brand.phoneDisplay}</a> · <a href={`mailto:${brand.email}`}>{brand.email}</a>
       </div>
       <div>
-        <a href="/aviso-de-privacidad">Aviso de privacidad</a><br />
-        © {new Date().getFullYear()} {brand.legalName}
+        <a href="/servicios">Servicios</a> · <a href="/como-funciona">Cómo funciona</a> · <a href="/preguntas-frecuentes">Preguntas frecuentes</a> · <a href="/recursos">Recursos</a> · <a href="/en">English</a><br />
+        <a href="/aviso-de-privacidad">Aviso de privacidad</a> · © {new Date().getFullYear()} {brand.legalName}
       </div>
     </div>
   </footer>
@@ -116,6 +121,10 @@ const schema = {
 
   <ConsentBanner />
 
+  <script is:inline>
+    (function(){ var t=document.querySelector('.nav-toggle'), n=document.getElementById('main-nav');
+      if(!t||!n) return; t.addEventListener('click',function(){ var o=n.classList.toggle('open'); t.setAttribute('aria-expanded',o); }); })();
+  </script>
   <!-- Click tracking: any element with data-track pushes a GA4-style event to the dataLayer. GTM turns these into GA4 / Meta / Ads events. -->
   <script is:inline>
     document.addEventListener('click', function (e) {

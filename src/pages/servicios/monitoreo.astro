@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CTABand from '../../components/CTABand.astro';
+import Photo from '../../components/Photo.astro';
+import FAQ from '../../components/FAQ.astro';
+const faq = [
+  { q: '¿Quién ve las cámaras?', a: 'Únicamente monitores capacitados de nuestro equipo, bajo acuerdos de confidencialidad, desde un centro de monitoreo con acceso controlado. Las grabaciones no se comparten con nadie fuera del equipo de cuidado y la familia.' },
+  { q: '¿Dónde van las cámaras?', a: 'Solo en áreas comunes: sala, comedor, pasillos, cocina. Nunca en baño ni recámara, salvo que la familia lo pida expresamente por una situación de riesgo, y siempre por escrito.' },
+  { q: '¿La familia puede ver las cámaras?', a: 'Sí, si así lo decide la familia. Muchas prefieren ver solo el panel y los reportes, y dejar las cámaras al equipo. Se define en la valoración.' },
+  { q: '¿Qué pasa en una emergencia?', a: 'El monitor activa el protocolo: contacta a la cuidadora al instante, a la coordinadora, y a la familia y servicios de emergencia según el caso. Cada familia tiene su cadena de contacto definida por escrito.' },
+];
+---
+<Base title="Monitoreo experto 24/7 para personas con demencia en casa" description="Cámaras en áreas comunes revisadas por monitores capacitados las 24 horas: detectan cambios de conducta o salud, asesoran a la cuidadora y avisan a la familia. Cumplimiento con la ley mexicana de datos." pageType="services">
+  <PageHero eyebrow="Pilar 2" title="Siempre sabes que de verdad está bien." lead="La mayor angustia de una familia no es lo que pasa; es no saber. El monitoreo convierte la casa de tu familiar en un lugar donde alguien experto siempre está atento, y donde la cuidadora recibe apoyo real, no solo confianza." />
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Cómo funciona</p>
+        <h2>Ojos expertos, no solo cámaras.</h2>
+        <p>Una cámara sola no cuida a nadie. Lo que cambia todo es quién la ve y qué hace con lo que ve.</p>
+        <ul class="check">
+          <li><strong>Monitores capacitados en demencia</strong> revisan las cámaras de áreas comunes las 24 horas.</li>
+          <li><strong>Detectan cambios</strong> de conducta, marcha, apetito, sueño o estado de ánimo que anticipan un problema de salud, a veces días antes de que sea evidente.</li>
+          <li><strong>Asesoran a la cuidadora el mismo día:</strong> qué funcionó, qué ajustar, cómo manejar la próxima vez.</li>
+          <li><strong>Escalan según protocolo:</strong> coordinadora, familia, médico o emergencias, en ese orden o el que tu familia defina.</li>
+          <li><strong>Todo queda registrado</strong> en el panel familiar, con hora y contexto.</li>
+        </ul>
+      </div>
+      <Photo alt="Pantalla del centro de monitoreo con vistas de áreas comunes de una casa" shot="monitor de escritorio con mosaico de cámaras (contenido difuminado), manos de la monitora con libreta" />
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Privacidad</p>
+      <h2>Dignidad primero. Siempre.</h2>
+      <div class="grid">
+        <div class="card"><h3>Solo áreas comunes</h3><p>Sala, comedor, pasillos, cocina. Nunca baño ni recámara salvo petición expresa y por escrito de la familia.</p></div>
+        <div class="card"><h3>Consentimiento por escrito</h3><p>Los datos de salud son sensibles bajo la ley mexicana (LFPDPPP). Solo los tratamos con consentimiento expreso y firmado.</p></div>
+        <div class="card"><h3>Acceso restringido</h3><p>Solo monitores con acuerdo de confidencialidad, desde un centro con acceso controlado. Nada se comparte fuera del equipo y la familia.</p></div>
+        <div class="card"><h3>Tú decides</h3><p>Dónde van las cámaras, quién de la familia las puede ver, y cuándo se apagan (visitas, por ejemplo). Se acuerda antes de instalar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split rev">
+      <Photo alt="Sensor de puerta y luz nocturna instalados en el pasillo de una casa" shot="detalle de sensor de puerta y luz nocturna en un pasillo, luz cálida" />
+      <div>
+        <p class="eyebrow">Casa segura</p>
+        <h2>La deambulación se detecta antes de que sea una crisis.</h2>
+        <p>Junto con las cámaras instalamos lo que la casa necesite: sensores en puertas exteriores, iluminación nocturna en el camino al baño, retiro de tapetes y obstáculos, barras de apoyo, y cuando ayuda, un dispositivo portátil con localización. Todo sale de la auditoría anticaídas de la valoración inicial.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faq} title="Preguntas sobre el monitoreo" />
+  <CTABand label="monitoreo_band" />
+</Base>

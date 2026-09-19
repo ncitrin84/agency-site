@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABand from '../components/CTABand.astro';
+import Photo from '../components/Photo.astro';
+import Dashboard from '../components/Dashboard.astro';
+import FAQ from '../components/FAQ.astro';
+const faq = [
+  { q: '¿Cómo pago desde Estados Unidos?', a: 'Transferencia internacional o tarjeta. Facturamos en pesos con CFDI; si necesitas el comprobante en dólares para tus registros, te lo damos.' },
+  { q: '¿Puedo hablar con la cuidadora directamente?', a: 'Sí, en los horarios acordados. Para todo lo demás está la coordinadora, que responde el mismo día, y la línea 24/7 para lo urgente.' },
+  { q: '¿Qué pasa si tengo que viajar de emergencia?', a: 'Te avisamos antes de que sea emergencia: el monitoreo y la coordinadora anticipan cambios. Y si hay que viajar, la coordinadora te tiene el cuadro completo para que llegues a decidir, no a averiguar.' },
+  { q: '¿Y si mis hermanos en Guadalajara no están de acuerdo?', a: 'Es la situación más común. La junta mensual de cuidado pone a todos frente a los mismos datos, con la coordinadora moderando. Los desacuerdos bajan cuando la información es la misma para todos.' },
+];
+---
+<Base title="Cuidado en Guadalajara para familias que viven en Estados Unidos u otra ciudad" description="Vives lejos y tu mamá o papá con Alzheimer está en Guadalajara. Somos tus ojos: monitoreo 24/7, panel diario, reporte semanal, coordinadora que responde el mismo día y línea 24/7. En español e inglés." pageType="abroad">
+  <PageHero eyebrow="Familias que viven lejos" title="Tu mamá está en Guadalajara. Tú estás en Chicago. Nosotros somos tus ojos." lead="Sabemos cómo se siente: la culpa de no estar, la llamada con tu hermana que termina en pleito, el vuelo de emergencia que no resuelve nada. Esto lo construimos para ti." />
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Cómo funciona a distancia</p>
+        <h2>Sabes cómo está. Todos los días. Con datos.</h2>
+        <ul class="check">
+          <li><strong>Panel familiar</strong> actualizado cada día: sueño, comidas, ánimo, medicamentos, incidentes. Le preguntas al asistente y te responde con lo registrado.</li>
+          <li><strong>Reporte semanal</strong> en lenguaje claro, en español o inglés, cada lunes.</li>
+          <li><strong>Coordinadora</strong> que responde el mismo día, en tu horario.</li>
+          <li><strong>Línea 24/7</strong> para lo urgente, con alguien que conoce a tu familiar.</li>
+          <li><strong>Monitoreo 24/7</strong> por especialistas: si algo cambia, lo sabemos antes que nadie y te avisamos.</li>
+          <li><strong>Junta mensual</strong> por video con toda la familia, moderada por la coordinadora.</li>
+          <li><strong>Citas médicas acompañadas</strong>, con resumen para el médico y las indicaciones de regreso a ti el mismo día.</li>
+        </ul>
+      </div>
+      <Dashboard />
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap split rev">
+      <Photo alt="Mujer revisando el panel familiar en su teléfono desde una oficina" shot="mujer de 45–55 años viendo su teléfono con expresión de alivio, ambiente de oficina o cocina moderna" />
+      <div>
+        <p class="eyebrow">Para los hermanos que sí están</p>
+        <h2>Menos peleas. Misma información.</h2>
+        <p>La dinámica más común: una persona en Guadalajara carga con todo y siente que la critican desde lejos; la que vive fuera siente culpa y desconfianza. Ninguna de las dos tiene el cuadro completo.</p>
+        <p>Cuando todos ven el mismo panel, reciben el mismo reporte y se sientan en la misma junta mensual, la conversación cambia de “tú no haces” a “qué hacemos”. Lo vemos en cada familia.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faq} title="Preguntas de familias que viven lejos" />
+  <CTABand label="abroad_band" title="Agenda una llamada en tu horario." text="La valoración a domicilio la hacemos en Guadalajara; la conversación contigo, por video, cuando te acomode. En español o en inglés." />
+</Base>

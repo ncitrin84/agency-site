@@ -1,0 +1,32 @@
+export const faqHome = [
+  { q: 'Ya tenemos una cuidadora de confianza. ¿La tenemos que cambiar?',
+    a: 'No. Quédate con ella. La entrenamos en cuidado específico para demencia, la supervisamos y asesoramos a través del programa de monitoreo, y construimos todo el sistema alrededor de ella. Las caras conocidas importan.' },
+  { q: '¿Las cámaras no son invasivas?',
+    a: 'Cubren solo áreas comunes y tu familia decide dónde van. Las revisan exclusivamente monitores capacitados bajo acuerdos estrictos de confidencialidad, con un solo propósito: su seguridad y la calidad del cuidado. Todo el manejo de datos cumple con la ley mexicana de protección de datos personales. La mayoría de las familias nos dice que la alternativa, no saber, era mucho peor.' },
+  { q: '¿El cuidado en casa es la opción correcta, o una residencia?',
+    a: 'Muchas veces sí: el entorno conocido reduce de forma medible la agitación y la confusión. Pero no siempre. En la valoración te lo diremos con honestidad si tu situación pide algo distinto. Preferimos ser sinceros que convenientes.' },
+  { q: '¿Cuánto cuesta?',
+    a: 'Cada familia es distinta, así que la valoración gratuita produce una cotización mensual fija: sin sorpresas por hora, sin extras ocultos. Muchas familias descubren que cuesta menos que el rompecabezas de cuidadoras, emergencias y días de trabajo perdidos que ya están pagando.' },
+  { q: '¿Qué pasa si la cuidadora no llega?',
+    a: 'Nuestra garantía de respaldo significa que entra una suplente entrenada, con la rutina de tu familiar ya en la mano. Nunca te quedas sin cobertura.' },
+  { q: 'Vivimos en Estados Unidos. ¿Esto funciona a distancia?',
+    a: 'Es exactamente para lo que lo construimos. El panel, los reportes semanales, la línea familiar 24/7 y el cuidado monitoreado se diseñaron para que una hija en Chicago sepa con precisión cómo está su mamá en Guadalajara, todos los días. <a href="/familias-en-el-extranjero">Más sobre familias que viven lejos →</a>' },
+];
+
+export const faqAll = [
+  ...faqHome,
+  { q: '¿Cómo protegen la información de salud de mi familiar?',
+    a: 'Los datos de salud son datos sensibles bajo la ley mexicana (LFPDPPP). Solo los recabamos con tu consentimiento expreso y por escrito, se almacenan en sistemas con acceso restringido, nuestro equipo firma acuerdos de confidencialidad y la coordinación por WhatsApp se limita a logística, nunca a información clínica. Nuestro aviso de privacidad completo está en el pie de página.' },
+  { q: '¿Hay contrato de permanencia?',
+    a: 'No. El servicio es mensual y puedes cancelar con 30 días de aviso. Las familias se quedan porque funciona, no porque estén amarradas.' },
+  { q: '¿Qué pasa cuando la enfermedad avanza?',
+    a: 'El plan se revisa cada mes y se ajusta con la etapa: más horas, cuidado nocturno, cambios en la casa, coordinación con cuidados paliativos cuando llegue el momento. La coordinadora te lo anticipa; no tienes que descubrirlo tú en una crisis.' },
+  { q: '¿Cuidan otras demencias, o solo Alzheimer?',
+    a: 'Todas: Alzheimer, demencia vascular, cuerpos de Lewy, frontotemporal, mixta y deterioro cognitivo leve. El método se adapta al tipo y a la persona.' },
+  { q: '¿Quiénes son las cuidadoras?',
+    a: 'Enfermeras y cuidadoras profesionales seleccionadas por temperamento primero y experiencia después. Cada una completa una certificación en cuidado de demencia en español, un taller de método Montessori para demencia y turnos supervisados con una mentora antes de atender sola a una familia. Después: revisión semanal de casos y talleres mensuales.' },
+  { q: '¿En qué zonas atienden?',
+    a: 'Guadalajara, Zapopan, Tlajomulco y, según el caso, Tlaquepaque y Tonalá. Si estás fuera de estas zonas, escríbenos de todos modos; a veces podemos.' },
+  { q: '¿Atienden en inglés?',
+    a: 'Sí. La coordinación con la familia puede ser en inglés o en español; con tu familiar, en el idioma en que se sienta en casa.' },
+];

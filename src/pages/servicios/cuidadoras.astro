@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import CTABand from '../../components/CTABand.astro';
+import Photo from '../../components/Photo.astro';
+import FAQ from '../../components/FAQ.astro';
+const faq = [
+  { q: '¿Puedo conocer a la cuidadora antes de empezar?', a: 'Sí. Presentamos a la cuidadora asignada en casa, con la coordinadora, antes del primer turno. Si no hay química, la cambiamos sin costo.' },
+  { q: '¿Qué pasa si mi familiar la rechaza?', a: 'Es común las primeras semanas y sabemos manejarlo: entrada gradual, la familia presente al inicio, y técnicas de vinculación específicas. Si después de un periodo razonable no funciona, cambiamos de persona.' },
+  { q: '¿Las cuidadoras son enfermeras?', a: 'El equipo combina enfermeras tituladas y cuidadoras profesionales. La enfermera líder supervisa todos los casos; el perfil de quien está en casa se define según las necesidades clínicas de tu familiar.' },
+];
+---
+<Base title="Cuidadoras entrenadas en demencia" description="Cómo seleccionamos, certificamos y supervisamos a cada cuidadora: certificación en cuidado de demencia en español, método Montessori, mentoría y revisión semanal de casos." pageType="services">
+  <PageHero eyebrow="Pilar 1" title="Cuidadoras que entran a su mundo en vez de pelear con él." lead="Una cuidadora con buena intención pero sin entrenamiento en demencia discute, corrige y confronta. Y con la demencia no se puede discutir. Las nuestras saben qué hacer cuando no se quiere bañar, cuando pregunta por alguien que ya no está, o cuando la tarde se pone difícil." />
+
+  <section>
+    <div class="wrap split">
+      <Photo alt="Cuidadora y señora mayor doblando ropa juntas en la mesa del comedor" shot="actividad Montessori: doblar servilletas o clasificar botones, manos en primer plano" />
+      <div>
+        <p class="eyebrow">Qué las hace distintas</p>
+        <h2>Redirigir, no confrontar.</h2>
+        <p>Rechazo al baño, deambulación, síndrome vespertino, preguntas repetidas, agresividad, negarse a comer. Para cada conducta hay 3 o 4 respuestas que sí funcionan y muchas que la empeoran. Nuestras cuidadoras aprenden las que funcionan antes de entrar a tu casa, y las afinan cada semana con la enfermera líder.</p>
+        <ul class="check">
+          <li>Comunicación adaptada a la etapa: frases cortas, una instrucción a la vez, sin “¿te acuerdas?”</li>
+          <li>Método de 5 pasos ante conductas difíciles: conectar, evaluar, responder, evaluar de nuevo, compartir con el equipo</li>
+          <li>Actividades con sentido: método Montessori para demencia, música, reminiscencia, rutinas cognitivas</li>
+          <li>Registro diario de signos, comidas, sueño, ánimo e incidentes en el panel familiar</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Cómo llegan a tu casa</p>
+      <h2>Nadie atiende a una familia sin pasar por esto.</h2>
+      <div class="steps">
+        <div class="step"><h3>Selección</h3><p>Primero temperamento (paciencia, calma, calidez), después experiencia. Referencias verificadas y antecedentes revisados.</p></div>
+        <div class="step"><h3>Certificación</h3><p>Certificación en cuidado de demencia en español, reconocida por la Alzheimer's Association, más taller de método Montessori para demencia.</p></div>
+        <div class="step"><h3>Turnos supervisados</h3><p>Acompaña a una mentora con familias reales antes de estar sola. La mentora firma que está lista.</p></div>
+        <div class="step"><h3>Supervisión continua</h3><p>Revisión semanal de casos con la enfermera líder, retroalimentación diaria del monitoreo y talleres mensuales.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split rev">
+      <Photo alt="Enfermera líder en una sesión de revisión de casos con el equipo" shot="grupo pequeño de cuidadoras en una mesa con la enfermera líder, ambiente de taller" />
+      <div>
+        <p class="eyebrow">Modalidades</p>
+        <h2>Por horas, 24 horas o respiro.</h2>
+        <p><strong>Por horas:</strong> turnos de 4 a 12 horas, de día o de noche. <strong>24 horas:</strong> equipo fijo en rotación para etapas moderadas y avanzadas o familias que no pueden estar presentes. <strong>Respiro:</strong> turnos puntuales o programados para que quien cuida descanse; el agotamiento del cuidador es la causa más común de una crisis familiar.</p>
+        <p><strong>¿Ya tienes cuidadora?</strong> Quédate con ella. La entrenamos, la supervisamos con el monitoreo y armamos el sistema alrededor de ella.</p>
+        <p><strong>Garantía de respaldo:</strong> si una cuidadora no puede llegar, entra una suplente entrenada con la rutina de tu familiar en la mano.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faq} title="Preguntas sobre las cuidadoras" />
+  <CTABand label="cuidadoras_band" />
+</Base>

@@ -4,23 +4,30 @@ import LeadForm from '../components/LeadForm.astro';
 import { brand } from '../config/brand.js';
 const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand.whatsappGreeting)}`;
 ---
-<Base title="Contacto y valoración gratuita" description={`Solicita una valoración a domicilio sin costo. Llámanos, escríbenos por WhatsApp o déjanos tus datos. ${brand.serviceArea}.`} pageType="contact">
+<Base title="Agenda tu valoración gratuita" description={`Solicita una valoración a domicilio sin costo. Llámanos, escríbenos por WhatsApp o déjanos tus datos y te contactamos el mismo día hábil. ${brand.serviceArea}.`} pageType="contact">
   <section>
-    <div class="wrap" style="display:grid;grid-template-columns:1.1fr 1fr;gap:40px">
+    <div class="wrap split" style="align-items:start">
       <div>
-        <h1>Hablemos</h1>
-        <p class="lead">Déjanos tus datos y te llamamos el mismo día hábil. O, si prefieres, escríbenos directo.</p>
+        <p class="eyebrow">Valoración gratuita</p>
+        <h1>Cuéntanos qué está pasando en casa.</h1>
+        <p class="lead">Déjanos tus datos y te llamamos el mismo día hábil para agendar la visita. O, si prefieres, escríbenos directo.</p>
         <p>
           <a class="btn btn-wa" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label="contacto">WhatsApp</a>
           &nbsp;
           <a class="btn btn-ghost" href={`tel:+${brand.phoneE164}`} data-track="phone_click" data-label="contacto">Llamar {brand.phoneDisplay}</a>
         </p>
-        <p style="color:var(--muted);font-size:.95rem">Atendemos {brand.serviceArea}. Horario de atención telefónica: lunes a sábado, 9:00 a 19:00.</p>
+        <h3 style="margin-top:28px">Qué pasa después</h3>
+        <ul class="check">
+          <li>Te llamamos el mismo día hábil (lunes a sábado, 9:00 a 19:00)</li>
+          <li>Agendamos la visita a domicilio, sin costo, en {brand.serviceArea}</li>
+          <li>Si vives fuera, la conversación contigo es por video, en tu horario</li>
+          <li>Sales con una lectura honesta y los 3 cambios que más ayudarían ahora, nos contrates o no</li>
+        </ul>
+        <p class="hero-note" lang="en"><strong>English speakers:</strong> fill in the form in English; we reply in English.</p>
       </div>
       <div class="card">
         <LeadForm />
       </div>
     </div>
   </section>
-  <style>@media (max-width: 800px) { section .wrap { grid-template-columns: 1fr !important; } }</style>
 </Base>

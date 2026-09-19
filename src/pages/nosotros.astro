@@ -1,18 +1,71 @@
 ---
 import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABand from '../components/CTABand.astro';
+import Photo from '../components/Photo.astro';
 import { brand } from '../config/brand.js';
 ---
-<Base title="Nosotros" description={`Quiénes somos en ${brand.name}: un equipo de enfermería de Guadalajara dedicado exclusivamente al cuidado de personas con Alzheimer y demencia en su hogar.`} pageType="about">
+<Base title="Nosotros: la familia y las enfermeras que lo vivieron" description={`Quiénes somos en ${brand.name}: un equipo de enfermería de Guadalajara dedicado exclusivamente al cuidado de personas con Alzheimer y demencia en su hogar, nacido de la experiencia de cuidar a alguien de nuestra propia familia.`} pageType="about">
+  <PageHero eyebrow="Nosotros" title="No fundamos una empresa. Sobrevivimos un diagnóstico y anotamos todo lo que funcionó." />
+
   <section>
-    <div class="wrap prose">
-      <h1>Nosotros</h1>
-      <p class="lead">{brand.name} nació en Guadalajara de la experiencia de enfermeras que vieron, una y otra vez, a familias hacer lo imposible por cuidar a un ser querido con Alzheimer sin la preparación ni el apoyo que hacía falta.</p>
-      <p>Nos dedicamos a una sola cosa: el cuidado de personas con demencia en su propia casa. No somos una agencia general de enfermería. Esa especialización es lo que permite que nuestro personal sepa qué hacer cuando tu papá no quiere bañarse, cuando tu mamá pregunta por alguien que ya no está, o cuando la tarde se vuelve difícil.</p>
-      <h2>Nuestro equipo</h2>
-      <p>Somos un equipo de enfermería y cuidadoras profesionales, lideradas por enfermeras con experiencia clínica y capacitación certificada en cuidado de demencia. <em>(Aquí van los perfiles de Paola, Ale y el equipo, con foto.)</em></p>
-      <h2>Nuestros principios</h2>
-      <p>Persona antes que enfermedad. Rutinas y actividades con sentido, no solo vigilancia. Comunicación honesta con la familia. Confidencialidad estricta de la información de salud. Y cuidar también a quien cuida.</p>
-      <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="nosotros_cta">Conversemos</a>
+    <div class="wrap split">
+      <div class="prose">
+        <p class="lead">Cuando a una persona de nuestra familia le diagnosticaron demencia, hicimos lo que hace toda familia: improvisar.</p>
+        <p>Contratamos cuidadoras que peleaban con ella en vez de entrar a su mundo. Perseguimos medicamentos, discutimos por WhatsApp, dudamos de los médicos y pasamos noches en vela preguntándonos si estaba bien. Nos equivocamos mucho. Y poco a poco, con las enfermeras que la cuidaban cada día, fuimos encontrando lo que sí funcionaba.</p>
+        <p>Lo anotamos todo: cómo lograr que se bañara sin pelear, qué hacer a las 6 de la tarde cuando todo se ponía difícil, cómo hablar con el neurólogo para que la consulta sirviera, cómo repartir el trabajo entre hermanos sin que se rompiera la familia.</p>
+        <p>Cuando otras familias empezaron a preguntarnos cómo lo hacíamos, entendimos que no era suerte. Era un sistema. Y que casi nadie en Guadalajara lo ofrecía.</p>
+        <p><strong>{brand.name}</strong> es ese sistema, abierto a un número pequeño de familias que están donde nosotros estuvimos. Las enfermeras que lo descubrieron con nosotros son el corazón del equipo hoy.</p>
+      </div>
+      <Photo alt="Manos de una señora mayor sostenidas por las de una cuidadora" shot="manos: señora mayor y cuidadora, primer plano, luz natural" ratio="4/5" />
     </div>
   </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">El equipo</p>
+      <h2>Enfermeras primero.</h2>
+      <p class="lead">Somos un equipo de enfermería liderado por enfermeras con experiencia clínica y capacitación certificada en cuidado de demencia. No somos una agencia general que “también” hace demencia: es lo único que hacemos.</p>
+      <div class="grid" style="margin-top:24px">
+        <div class="card"><Photo alt="Retrato de la enfermera líder" shot="retrato de Paola, fondo neutro, sonrisa natural" ratio="1/1" /><h3 style="margin-top:14px">[Nombre], Enfermera líder</h3><p>[2–3 líneas: formación, años cuidando personas con demencia, qué la mueve.]</p></div>
+        <div class="card"><Photo alt="Retrato de la coordinadora de cuidado" shot="retrato de Ale, fondo neutro, sonrisa natural" ratio="1/1" /><h3 style="margin-top:14px">[Nombre], Coordinadora de cuidado</h3><p>[2–3 líneas.]</p></div>
+        <div class="card"><Photo alt="Retrato del equipo de cuidadoras" shot="foto de grupo del equipo, exterior, informal" ratio="1/1" /><h3 style="margin-top:14px">El equipo de cuidadoras</h3><p>Seleccionadas por temperamento, certificadas en demencia, supervisadas cada semana. <a href="/servicios/cuidadoras">Cómo las formamos →</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split rev">
+      <Photo alt="Certificados de capacitación en cuidado de demencia sobre una mesa" shot="certificados impresos y el libro El día de 36 horas sobre una mesa" />
+      <div>
+        <p class="eyebrow">Cómo nos formamos</p>
+        <h2>Capacitación que se puede verificar.</h2>
+        <ul class="check">
+          <li>Certificación en cuidado de demencia en español, reconocida por la Alzheimer's Association (EE. UU.)</li>
+          <li>Método de 5 pasos para conductas difíciles, adoptado como protocolo interno</li>
+          <li>Taller de método Montessori para demencia: actividades con sentido, no entretenimiento</li>
+          <li>Curso iSupport de la OMS: lo hacen nuestras cuidadoras y lo compartimos con las familias</li>
+          <li>Turnos supervisados con mentora antes de atender sola; revisión semanal de casos; talleres mensuales</li>
+          <li>Estándar de competencia CONOCER en cuidado de personas mayores, en proceso para todo el equipo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Nuestros principios</p>
+      <h2>Lo que no negociamos.</h2>
+      <div class="grid">
+        <div class="card"><h3>Persona antes que enfermedad</h3><p>Su historia, sus gustos y su dignidad guían cada decisión. La demencia es una condición, no una identidad.</p></div>
+        <div class="card"><h3>Días con sentido</h3><p>Rutinas y actividades que importan, no vigilancia. Una persona con demencia puede tener un buen día. Muchos.</p></div>
+        <div class="card"><h3>Honestidad con la familia</h3><p>Te decimos lo que vemos, incluso cuando es difícil. Especialmente cuando es difícil.</p></div>
+        <div class="card"><h3>Confidencialidad estricta</h3><p>La información de salud de tu familiar se maneja conforme a la ley y con acuerdos firmados por todo el equipo.</p></div>
+        <div class="card"><h3>Cuidar a quien cuida</h3><p>A la familia y a nuestras cuidadoras. Nadie sostiene esto solo.</p></div>
+        <div class="card"><h3>Pocas familias, bien</h3><p>Crecemos solo al ritmo al que podemos formar cuidadoras. Preferimos decir “ahora no” que atender mal.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <CTABand label="nosotros_band" title="Conversemos." text="Cuéntanos qué está pasando en casa. Te decimos con honestidad cómo podemos ayudar, y si no somos nosotros, quién." />
 </Base>

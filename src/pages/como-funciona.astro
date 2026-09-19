@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABand from '../components/CTABand.astro';
+import Photo from '../components/Photo.astro';
+---
+<Base title="Cómo funciona: valoración gratuita, plan de cuidado y arranque en 2 semanas" description="Qué pasa en la valoración gratuita a domicilio, qué contiene el plan de cuidado por escrito con precio mensual fijo, y cómo arranca el servicio en dos semanas." pageType="how">
+  <PageHero eyebrow="Cómo funciona" title="De abrumada a resuelto, en tres pasos." lead="Sin letra chica. Esto es exactamente lo que pasa desde que nos escribes hasta que respiras." />
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Paso 1 · Sin costo, sin compromiso</p>
+        <h2>La valoración en casa</h2>
+        <p>Nuestra enfermera líder visita el hogar de tu familiar. Dura entre 60 y 90 minutos. Conoce a tu familiar, a tu familia y a la cuidadora si ya hay una.</p>
+        <ul class="check">
+          <li>Etapa y tipo de demencia, tal como se ve en casa, no solo en el diagnóstico</li>
+          <li>Rutinas del día: sueño, comidas, baño, actividad, momentos difíciles</li>
+          <li>Medicamentos actuales y quién los administra</li>
+          <li>Recorrido de seguridad: caídas, iluminación, puertas, cocina, baño</li>
+          <li>Qué es lo más difícil para la familia ahora mismo</li>
+        </ul>
+        <p><strong>Sales de la visita con:</strong> una lectura honesta de la etapa, los 3 cambios que más ayudarían esta misma semana (los contrates o no), y nuestra recomendación sincera, incluso si es que no somos lo que necesitas.</p>
+      </div>
+      <Photo alt="Enfermera líder conversando con una familia en la sala de su casa" shot="enfermera con libreta sentada en la sala con dos familiares, ambiente cálido" ratio="4/5" />
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap split rev">
+      <Photo alt="Plan de cuidado impreso sobre la mesa" shot="documento de plan de cuidado de varias páginas sobre una mesa, manos señalando una sección" />
+      <div>
+        <p class="eyebrow">Paso 2 · En 48 horas</p>
+        <h2>Tu plan de cuidado por escrito</h2>
+        <p>Un documento que tu familia entera puede leer, con:</p>
+        <ul class="check">
+          <li>Horarios y modalidad de cuidadoras, con la persona propuesta</li>
+          <li>Configuración del monitoreo y cambios de seguridad en casa</li>
+          <li>Plan de medicamentos e insumos</li>
+          <li>Coordinación médica: qué citas, con quién, cuándo</li>
+          <li>Rutina diaria y actividades con sentido</li>
+          <li>Apoyo a la familia: panel, reportes, junta mensual, capacitación</li>
+          <li><strong>Un precio mensual fijo.</strong> Sin sorpresas por hora, sin extras ocultos.</li>
+        </ul>
+        <p>Lo revisamos juntos por video o en persona. Lo ajustamos hasta que sea el plan correcto. Sin contrato de permanencia: es mensual, con 30 días de aviso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Paso 3 · En 2 semanas</p>
+        <h2>El cuidado empieza</h2>
+        <ul class="check">
+          <li>Presentación de la cuidadora en casa, con la coordinadora, antes del primer turno</li>
+          <li>Entrada gradual las primeras semanas; la familia presente al inicio si ayuda</li>
+          <li>Instalación de monitoreo y cambios de seguridad</li>
+          <li>Panel familiar activo desde el primer día</li>
+          <li>Primer reporte semanal a los 7 días; primera junta familiar al mes</li>
+        </ul>
+        <p>Y a partir de ahí, el plan se revisa cada mes y se ajusta con la etapa. Tú no tienes que descubrir el siguiente paso en una crisis: la coordinadora te lo anticipa.</p>
+      </div>
+      <Photo alt="Cuidadora y señora mayor regando plantas en la terraza" shot="actividad cotidiana tranquila: regar plantas, preparar café, poner la mesa" ratio="4/5" />
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Nuestras garantías</p>
+      <h2>Lo que puedes exigirnos.</h2>
+      <div class="grid">
+        <div class="card"><h3>Respaldo</h3><p>Si una cuidadora no puede llegar, entra una suplente entrenada con la rutina de tu familiar. Nunca te quedas sin cobertura.</p></div>
+        <div class="card"><h3>Precio fijo</h3><p>Lo que dice el plan es lo que pagas cada mes. Si la etapa cambia, cambiamos el plan juntos, por escrito, antes de cambiar el precio.</p></div>
+        <div class="card"><h3>Química</h3><p>Si tu familiar y la cuidadora no conectan después de un periodo razonable, la cambiamos sin costo.</p></div>
+        <div class="card"><h3>Honestidad</h3><p>Si en la valoración vemos que necesitas algo distinto a nosotros, te lo decimos y te ayudamos a encontrarlo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <CTABand label="como_band" />
+</Base>
