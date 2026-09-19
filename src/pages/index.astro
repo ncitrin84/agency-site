@@ -15,17 +15,27 @@ const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand
       <div>
         <p class="eyebrow">Cuidado en casa especializado en demencia · {brand.city}</p>
         <h1>No tienes que volverte experta en demencia para que tu mamá esté segura en casa.</h1>
-        <p class="lead">{brand.name} se encarga de todo lo que su cuidado necesita: cuidadoras entrenadas en demencia, monitoreo 24/7 por especialistas, medicamentos, médicos, insumos y apoyo para toda la familia. Un solo equipo. Resuelto.</p>
+        <p class="lead">{brand.name} se encarga de todo lo que su cuidado necesita: cuidadoras entrenadas en demencia, monitoreo 24/7 por especialistas, medicamentos, médicos, insumos y apoyo para toda la familia. Un solo equipo. Resuelto. Aunque vivas lejos. Aunque ya te haya fallado una cuidadora.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="hero_valoracion">Agendar mi valoración gratuita</a>
+          <a class="btn btn-primary" href="/contacto" data-track="cta_click" data-label="hero_valoracion">Quiero mi valoración gratuita</a>
           <a class="btn btn-wa" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label="hero">Escribir por WhatsApp</a>
         </div>
-        <p class="hero-note">Visita a domicilio gratuita · Sin compromiso · Español e inglés</p>
+        <p class="hero-note">Visita a domicilio de 60–90 min, sin costo · Te llamamos el mismo día hábil · Español e inglés</p>
         <p class="hero-proof">Nacimos de años cuidando a una persona de nuestra propia familia: cada servicio existe porque lo necesitamos y no lo encontramos.</p>
       </div>
       <Photo alt="Cuidadora acompañando a una señora mayor en la sala de su casa" shot="cuidadora y señora mayor conversando en la sala, luz natural, sin uniforme clínico" ratio="4/5" />
     </div>
   </section>
+
+  <div class="proofbar">
+    <div class="wrap">
+      <span><b>Certificación en demencia</b> reconocida por la Alzheimer's Association</span>
+      <span><b>Método Montessori</b> para demencia</span>
+      <span><b>25 h de curso + 40 h supervisadas</b> antes de atender sola</span>
+      <span><b>Garantía de respaldo</b> y precio mensual fijo</span>
+      <span><b>Datos de salud</b> conforme a la LFPDPPP</span>
+    </div>
+  </div>
 
   <section>
     <div class="wrap">
@@ -39,14 +49,30 @@ const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand
         <li>Estás viviendo un duelo por alguien que sigue aquí, y no hay tiempo ni para sentirlo.</li>
         <li>Honestamente no sabes si algo de lo que haces está ayudando.</li>
       </ul>
+      <p>Y cada mes que pasa así cuesta: en tu salud, en dinero que se va en emergencias y en cuidadoras que no duran, y en la relación con tus hermanos, que se desgasta discusión por discusión.</p>
       <p class="callout"><strong>No eres tú. Y tampoco es la cuidadora.</strong> El cuidado en casa tradicional nunca se diseñó para la demencia. Nosotros sí.</p>
+    </div>
+  </section>
+
+  <section class="dream">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Imagina</p>
+        <h2>El martes de la semana que entra, a las 7 de la mañana.</h2>
+        <p>Abres el teléfono. El panel dice que tu mamá durmió 7 horas, desayunó completo y ayer salió al parque con su cuidadora. La única nota de la semana: un rato de inquietud el jueves a las 6 de la tarde, resuelto en 15 minutos con el protocolo vespertino.</p>
+        <p>Su cita con el neurólogo del viernes ya está agendada, con transporte, y el médico va a recibir un resumen de una página con sus datos del mes. Los pañales llegaron el lunes. Nadie te llamó a las 3 de la mañana.</p>
+        <p>Le escribes a tu hermana: “¿Viste el reporte?”. Y por primera vez en meses, la conversación no es un pleito.</p>
+        <p><strong>Eso es lo que se siente tenerlo resuelto.</strong> No es un futuro lejano: es lo que el sistema produce a partir de la segunda semana.</p>
+      </div>
+      <Photo alt="Mujer revisando el panel familiar en su teléfono, con café, tranquila" shot="mujer 45–55 años en la mañana con café viendo el teléfono, expresión de alivio, luz natural" ratio="4/5" />
     </div>
   </section>
 
   <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
     <div class="wrap">
-      <p class="eyebrow">Un cuidado distinto</p>
+      <p class="eyebrow">El Sistema de Cuidado Acompañado</p>
       <h2>Cuatro pilares. Un solo equipo responsable.</h2>
+      <p class="lead">No vendemos horas de una persona. Ponemos alrededor de tu familiar un sistema de cuatro partes que se supervisan entre sí. Si una falla, las otras tres lo detectan. Por eso funciona cuando una cuidadora sola no puede.</p>
       <div class="pillars">
         <div class="pillar"><span class="num">1</span><h3>Cuidadoras entrenadas en demencia</h3><p>Entran a su mundo en vez de pelear con él: menos batallas, días más tranquilos, dignidad intacta.</p><a href="/servicios/cuidadoras">Cómo las entrenamos →</a></div>
         <div class="pillar"><span class="num">2</span><h3>Monitoreo experto 24/7</h3><p>Especialistas supervisan el cuidado por cámaras en casa, detectan cambios a tiempo y asesoran a la cuidadora cada día.</p><a href="/servicios/monitoreo">Cómo funciona el monitoreo →</a></div>
@@ -117,6 +143,35 @@ const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent(brand
         <div class="step"><h3>El cuidado empieza en 2 semanas</h3><p>Equipo entrenado en su lugar, monitoreo activo, panel funcionando, insumos llegando. Respiras, quizá por primera vez en meses.</p></div>
       </div>
       <p style="margin-top:20px"><a href="/como-funciona">Qué pasa exactamente en la valoración →</a></p>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Honestidad primero</p>
+      <h2>Es para ti si… y no es para ti si…</h2>
+      <div class="split" style="align-items:start">
+        <div class="card">
+          <h3>Es para ti si</h3>
+          <ul class="check">
+            <li>Tu mamá o papá tiene Alzheimer u otra demencia y quieres que siga en su casa</li>
+            <li>Ya tuviste una cuidadora “normal” y viste que no era suficiente</li>
+            <li>Vives lejos, o cerca pero no puedes con todo</li>
+            <li>Quieres saber cómo está de verdad, no “bien, gracias”</li>
+            <li>Prefieres un precio fijo a sorpresas cada quincena</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>No es para ti si</h3>
+          <ul class="check no">
+            <li>Buscas la cuidadora más barata por hora; hay opciones para eso, no somos nosotros</li>
+            <li>Tu familiar necesita enfermería intensiva las 24 horas por una condición médica aguda</li>
+            <li>La familia no está dispuesta a que haya un plan por escrito y un equipo que lo siga</li>
+            <li>Necesitas empezar mañana; nuestro arranque serio toma dos semanas</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:18px;color:var(--muted)">Si estás en la segunda lista, en la valoración te decimos con quién sí, y sin costo.</p>
     </div>
   </section>
 

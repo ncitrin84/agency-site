@@ -1,14 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
 import { brand } from '../config/brand.js';
-// Conversion page. GTM fires the GA4 "generate_lead", Meta "Lead" and Google Ads conversion on this URL.
+// Conversion page. GTM fires GA4 "generate_lead", Meta "Lead" and Google Ads conversion on this URL.
+// One goal: set the expectation for the next step and get them to save our number.
+const waHref = `https://wa.me/${brand.phoneE164}?text=${encodeURIComponent('Hola, acabo de enviar el formulario en la página. Quedo pendiente.')}`;
 ---
-<Base title="Gracias" description="Recibimos tu mensaje." pageType="thankyou" noindex={true}>
+<Base title="Listo. Esto es lo que pasa ahora" description="Recibimos tus datos. Te llamamos el mismo día hábil para agendar la visita." pageType="thankyou" noindex={true}>
   <section>
     <div class="wrap prose">
-      <h1>Gracias, recibimos tu mensaje</h1>
-      <p class="lead">Te contactamos el mismo día hábil. Si es urgente, llámanos al <a href={`tel:+${brand.phoneE164}`} data-track="phone_click" data-label="gracias">{brand.phoneDisplay}</a>.</p>
-      <p>Mientras tanto, te puede servir el curso gratuito <a href="https://www.isupportfordementia.org/" target="_blank" rel="noopener">iSupport de la OMS</a> para familiares de personas con demencia, disponible en español.</p>
+      <p class="eyebrow">Recibido</p>
+      <h1>Listo. Ya diste el paso más difícil.</h1>
+      <p class="lead">Recibimos tus datos. Esto es exactamente lo que pasa ahora:</p>
+      <div class="steps" style="margin:24px 0">
+        <div class="step"><h3>Hoy</h3><p>Te llama nuestra coordinadora el mismo día hábil (lunes a sábado, 9:00 a 19:00) desde el <strong>{brand.phoneDisplay}</strong>. Guárdalo para que reconozcas la llamada.</p></div>
+        <div class="step"><h3>Esta semana</h3><p>Agendamos la visita a domicilio de 60–90 minutos con nuestra enfermera líder. Si vives fuera, la conversación contigo es por video.</p></div>
+        <div class="step"><h3>48 horas después</h3><p>Recibes por escrito la lectura de la etapa, los 3 cambios que más ayudarían ahora, y si lo quieres, el plan con precio mensual fijo.</p></div>
+      </div>
+      <p><a class="btn btn-wa" href={waHref} target="_blank" rel="noopener" data-track="whatsapp_click" data-label="gracias">Guardar nuestro WhatsApp</a></p>
+      <p style="margin-top:28px">Mientras tanto, si la tarde de hoy se pone difícil: <a href="/recursos/sindrome-vespertino-que-es-y-como-manejarlo">un protocolo sencillo para las 5 de la tarde</a>.</p>
     </div>
   </section>
   <script is:inline>
